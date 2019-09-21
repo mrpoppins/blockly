@@ -38,6 +38,7 @@
 # This script also generates:
 #   blocks_compressed.js: The compressed Blockly language blocks.
 #   javascript_compressed.js: The compressed JavaScript generator.
+#   haxe_compressed.js: The compressed Haxe generator.
 #   python_compressed.js: The compressed Python generator.
 #   php_compressed.js: The compressed PHP generator.
 #   lua_compressed.js: The compressed Lua generator.
@@ -204,6 +205,7 @@ class Gen_compressed(threading.Thread):
 
     if ('generators' in self.bundles):
       self.gen_generator("javascript")
+      self.gen_generator("haxe")
       self.gen_generator("python")
       self.gen_generator("php")
       self.gen_generator("lua")
